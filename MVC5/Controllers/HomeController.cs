@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC5.ModelBinder;
 using MVC5.Models;
 
 namespace MVC5.Controllers
@@ -15,7 +16,7 @@ namespace MVC5.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Customer objCustomer)
+        public ActionResult Index([ModelBinder(typeof(CustomerModelBinder))] Customer objCustomer)
         {
             return View("displayCustomer",objCustomer);
         }
