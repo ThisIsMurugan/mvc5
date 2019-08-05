@@ -1,0 +1,37 @@
+﻿@model MVC5.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>displayCustomer</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th></th>
+        </tr>
+    
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.CustomerCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.CustomerName)
+            </td>
+        </tr>
+    
+    </table>
+</body>
+</html>
