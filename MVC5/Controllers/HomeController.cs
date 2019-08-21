@@ -16,7 +16,8 @@ namespace MVC5.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index([ModelBinder(typeof(CustomerModelBinder))] Customer objCustomer)
+        public ActionResult Index([ModelBinder(typeof(CustomerModelBinder))]
+                                    Customer objCustomer)
         {
             return View("displayCustomer",objCustomer);
         }

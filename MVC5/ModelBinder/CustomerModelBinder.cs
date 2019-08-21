@@ -15,7 +15,8 @@ namespace MVC5.ModelBinder
     /// </summary>
     public class CustomerModelBinder : IModelBinder
     {
-        public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+        public object BindModel(ControllerContext controllerContext, 
+                                    ModelBindingContext bindingContext)
         {
             HttpContextBase httpContextBase = controllerContext.HttpContext;
             string custCode = httpContextBase.Request.Form["txtCustomerCode"];
