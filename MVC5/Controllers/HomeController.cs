@@ -12,7 +12,6 @@ namespace MVC5.Controllers
         public ActionResult Index()
         {
             Log.Instance.Debug("Home/Index called");
-            Log.Instance.Warn("It's gonna happen!!");
             return View();
         }
         [HttpPost]
